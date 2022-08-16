@@ -4,7 +4,7 @@
     <test preserve-order="true" name="All Tests">
         <parameter name="url" value="url">
             <classes>
-                <class name="tests.RCB"/>
+                <class name="tests.RCB_IPL"/>
             </classes>
         </parameter>
     </test>

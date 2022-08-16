@@ -10,5 +10,5 @@ clone the project & open in intelli j (recommended)
 Procedure 1. Open > java > tests > rcb (execute as test NG)
 Procedure 2. Execute testng.xml file
 
-Thanks.
-Kindly share feedback.
+Thanks For Reviewing The Assignment
+Kindly Let Me Know If Facing Any Issue During Execution & Share Your Valuable Feedback
