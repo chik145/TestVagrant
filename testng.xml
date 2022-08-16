@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test preserve-order="true" name="All Tests">
+        <parameter name="url" value="url">
+            <classes>
+                <class name="tests.RCB"/>
+            </classes>
+        </parameter>
+    </test>
+</suite>
