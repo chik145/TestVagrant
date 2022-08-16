@@ -2,11 +2,12 @@ package tests;
 
 import frameworks.JsonUtils;
 import io.restassured.path.json.JsonPath;
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.util.List;
+
+import static org.testng.Assert.*;
 
 public class RCB_IPL {
 
@@ -14,7 +15,7 @@ public class RCB_IPL {
 
     @BeforeClass
     public void preCondition() {
-        Assert.assertNotNull(JsonUtils.fetchJsonData()); //Json File Should Not Be Blank
+        assertNotNull(JsonUtils.fetchJsonData()); //Json File Should Not Be Blank
         jsonPath = JsonUtils.fetchJsonData();
     }
 
@@ -25,7 +26,7 @@ public class RCB_IPL {
         int foreignPlayersCount = (int) countries.stream().filter(country ->
                 !country.equals("India")).count(); //filter foreign countries & get count
 
-        Assert.assertTrue(foreignPlayersCount < 5,
+        assertEquals(foreignPlayersCount, 4,
                 "Number Of Foreign Players Are More Then Allowed Limit Of 4");
     }
 
@@ -36,7 +37,7 @@ public class RCB_IPL {
         int wicketKeeperCount = (int) countries.stream().filter(country ->
                 country.equals("Wicket-keeper")).count(); //find num of wicket keepers available
 
-        Assert.assertTrue(wicketKeeperCount >= 1,
+        assertTrue(wicketKeeperCount >= 1,
                 "No Wicket Keeper Found In Team");
     }
 }
